@@ -2,7 +2,6 @@ puts "📃 Seeding data..."
 
 5.times do
   user = User.create(username: Faker::GreekPhilosophers.name.downcase.gsub(/\W/, '_'))
-
   rand(3..5).times do
     user.articles.create(
       title: Faker::Lorem.sentence, 
